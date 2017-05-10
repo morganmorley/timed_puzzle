@@ -13,7 +13,7 @@ int pinP = 12;
 
 //Other Inputs and Outputs
 int switchPin = 13;
-int LEDPin = 5;
+int LEDPin = 14;
 
 //Digits to display on 7-segment display
 int digit1 = 10;
@@ -112,7 +112,7 @@ void displayTime() {
     int switchState = digitalRead(switchPin);
     if (switchState == HIGH) {
       finished = true;
-      digitalWrite(14, HIGH);
+      digitalWrite(LEDPin, HIGH);
       Serial.println("Finished");
     } else {
       countdown = countdown - 1;
